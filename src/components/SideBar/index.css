@@ -1,0 +1,182 @@
+.nav-bar {
+  background: #181818;
+  width: 55px; /* increased width to fit larger icons */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0; /* chuyển sang bên phải */
+  z-index: 999;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+}
+
+.nav-bar .logo {
+  display: block;
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-bar .logo img {
+  display: inline-block;
+  margin: 8px auto;
+  width: 32px; /* increased logo size */
+  height: auto;
+}
+
+.nav-bar nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center icons horizontally */
+  position: absolute;
+  height: 210px;
+  top: 50%;
+  margin-top: -160px;
+  width: 100%;
+}
+
+.nav-bar nav a {
+  font-size: 36px; /* increased font size */
+  color: #4d4d4e;
+  display: flex;
+  justify-content: center; /* center icon horizontally */
+  align-items: center; /* center icon vertically */
+  line-height: 51px;
+  height: 51px;
+  position: relative;
+  text-decoration: none;
+  padding: 15px 0;
+}
+
+.nav-bar nav a i,
+.nav-bar nav a svg,
+.nav-bar nav a img {
+  transition: all 0.3s ease-out;
+  width: 28px; /* increased icon size */
+  height: auto;
+}
+
+.nav-bar nav a:hover {
+  color: #a7b94b;
+}
+
+.nav-bar nav a:hover::after {
+  opacity: 1;
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-bar nav a::after {
+  content: "";
+  font-size: 16px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+@media (min-width: 1024px) {
+  .nav-bar nav a:first-child::after {
+    content: "HOME";
+    right: 75px;
+  }
+
+  .nav-bar nav a.experience-link::after {
+    content: "EXPERIENCE";
+    right: 130px;
+  }
+
+  .nav-bar nav a.skills-link::after {
+    content: "SKILLS";
+    right: 80px;
+  }
+
+  .nav-bar nav a.projects-link::after {
+    content: "PROJECTS";
+    right: 110px;
+  }
+
+  .nav-bar nav a.contact-link::after {
+    content: "CONTACT";
+    right: 105px;
+  }
+}
+.nav-bar nav a.active svg {
+  color: #a7b94b;
+}
+
+.nav-bar ul {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center social icons horizontally */
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-bar ul li a {
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; /* increased font size */
+  line-height: 16px;
+  color: #4d4d4e;
+}
+
+.nav-bar ul li a img {
+  width: 24px; /* increased social icon size */
+  height: auto;
+}
+
+.nav-bar ul li a:hover {
+  color: #a7b94b;
+}
+
+.nav-bar ul li a:hover::after {
+  opacity: 1;
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: absolute;
+}
+
+.nav-bar ul li a::after {
+  content: "";
+  font-size: 16px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.nav-bar ul li a.linkedin-link::after {
+  content: "LinkedIn";
+  right: 85px;
+}
+
+.nav-bar ul li a.github-link::after {
+  content: "GitHub";
+  right: 70px;
+}
+
+.random {
+  color: #b9b9b9;
+}
