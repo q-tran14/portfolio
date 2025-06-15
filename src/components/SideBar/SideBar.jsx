@@ -23,11 +23,11 @@ const Sidebar = () => {
         <NavLink exact="true" activeclassname="active" to="/" onClick={() => handleClick('/')}>
           <Icon.HouseIcon size={28} weight={activePath === "/" ? 'fill' : 'regular'}/>
         </NavLink>
-        <NavLink activeclassname="active" className="experience-link" to="/experience" onClick={() => handleClick('/experience')}>
-          <Icon.BriefcaseIcon size={28} weight={activePath === "/experience" ? 'fill' : 'regular'} />
-        </NavLink>
         <NavLink activeclassname="active" className="skills-link" to="/skills" onClick={() => handleClick('/skills')}>
           <Icon.NutIcon size={28} weight={activePath === "/skills" ? 'fill' : 'regular'} />
+        </NavLink>
+        <NavLink activeclassname="active" className="experience-link" to="/experience" onClick={() => handleClick('/experience')}>
+          <Icon.BriefcaseIcon size={28} weight={activePath === "/experience" ? 'fill' : 'regular'} />
         </NavLink>
         <NavLink activeclassname="active" className="projects-link" to="/projects" onClick={() => handleClick('/projects')}>
           <Icon.JoystickIcon size={28} weight={activePath === "/projects" ? 'fill' : 'regular'} />

@@ -4,10 +4,8 @@ import * as Icon from "@phosphor-icons/react";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen flex items-center px-[30px]">
-      <div
-        className="flex flex-col md:flex-row w-full max-w-full md:max-w-4xl mx-auto items-center justify-between p-8 rounded-2xl shadow-lg backdrop-blur-sm"
-      >
+    <div className="flex items-center mx-[30px] py-[25vh]">
+      <div className="flex flex-col md:flex-row w-full max-w-full md:max-w-4xl mx-auto items-center justify-between p-8 rounded-2xl shadow-lg bg-black/25 backdrop-blur-sm">
         <img
           src={avatar1}
           alt="Avatar"
